@@ -14,6 +14,20 @@
 		A20708A829A158C500FFBCD0 /* ellehacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708A729A158C500FFBCD0 /* ellehacksTests.swift */; };
 		A20708B229A158C600FFBCD0 /* ellehacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708B129A158C600FFBCD0 /* ellehacksUITests.swift */; };
 		A20708B429A158C600FFBCD0 /* ellehacksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708B329A158C600FFBCD0 /* ellehacksUITestsLaunchTests.swift */; };
+		A20708C729A1590700FFBCD0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20708C629A1590700FFBCD0 /* WidgetKit.framework */; };
+		A20708C929A1590700FFBCD0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20708C829A1590700FFBCD0 /* SwiftUI.framework */; };
+		A20708CC29A1590700FFBCD0 /* ellehackswidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708CB29A1590700FFBCD0 /* ellehackswidgetBundle.swift */; };
+		A20708CE29A1590700FFBCD0 /* ellehackswidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708CD29A1590700FFBCD0 /* ellehackswidgetLiveActivity.swift */; };
+		A20708D029A1590700FFBCD0 /* ellehackswidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708CF29A1590700FFBCD0 /* ellehackswidget.swift */; };
+		A20708D329A1590900FFBCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20708D229A1590900FFBCD0 /* Assets.xcassets */; };
+		A20708D529A1590900FFBCD0 /* ellehackswidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A20708D129A1590700FFBCD0 /* ellehackswidget.intentdefinition */; };
+		A20708D629A1590900FFBCD0 /* ellehackswidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A20708D129A1590700FFBCD0 /* ellehackswidget.intentdefinition */; };
+		A20708D929A1590900FFBCD0 /* ellehackswidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A20708C429A1590700FFBCD0 /* ellehackswidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A20708E429A1613100FFBCD0 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20708E329A1613100FFBCD0 /* DeviceActivity.framework */; };
+		A20708E729A1613100FFBCD0 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708E629A1613100FFBCD0 /* DeviceActivityMonitorExtension.swift */; };
+		A20708EC29A1613100FFBCD0 /* ellehacksdeviceactivityext.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A20708E229A1613100FFBCD0 /* ellehacksdeviceactivityext.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A20708F229A1719700FFBCD0 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708F129A1719700FFBCD0 /* DataModel.swift */; };
+		A20708F429A171C100FFBCD0 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20708F329A171C100FFBCD0 /* ScheduleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +45,36 @@
 			remoteGlobalIDString = A207089229A158C400FFBCD0;
 			remoteInfo = ellehacks;
 		};
+		A20708D729A1590900FFBCD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A207088B29A158C400FFBCD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A20708C329A1590700FFBCD0;
+			remoteInfo = ellehackswidgetExtension;
+		};
+		A20708EA29A1613100FFBCD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A207088B29A158C400FFBCD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A20708E129A1613100FFBCD0;
+			remoteInfo = ellehacksdeviceactivityext;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A20708DD29A1590900FFBCD0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A20708EC29A1613100FFBCD0 /* ellehacksdeviceactivityext.appex in Embed Foundation Extensions */,
+				A20708D929A1590900FFBCD0 /* ellehackswidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A207089329A158C400FFBCD0 /* ellehacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ellehacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +87,22 @@
 		A20708AD29A158C600FFBCD0 /* ellehacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ellehacksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20708B129A158C600FFBCD0 /* ellehacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ellehacksUITests.swift; sourceTree = "<group>"; };
 		A20708B329A158C600FFBCD0 /* ellehacksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ellehacksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A20708C429A1590700FFBCD0 /* ellehackswidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ellehackswidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20708C629A1590700FFBCD0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A20708C829A1590700FFBCD0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A20708CB29A1590700FFBCD0 /* ellehackswidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ellehackswidgetBundle.swift; sourceTree = "<group>"; };
+		A20708CD29A1590700FFBCD0 /* ellehackswidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ellehackswidgetLiveActivity.swift; sourceTree = "<group>"; };
+		A20708CF29A1590700FFBCD0 /* ellehackswidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ellehackswidget.swift; sourceTree = "<group>"; };
+		A20708D129A1590700FFBCD0 /* ellehackswidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ellehackswidget.intentdefinition; sourceTree = "<group>"; };
+		A20708D229A1590900FFBCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20708D429A1590900FFBCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20708E229A1613100FFBCD0 /* ellehacksdeviceactivityext.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ellehacksdeviceactivityext.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20708E329A1613100FFBCD0 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		A20708E629A1613100FFBCD0 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		A20708E829A1613100FFBCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20708E929A1613100FFBCD0 /* ellehacksdeviceactivityext.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ellehacksdeviceactivityext.entitlements; sourceTree = "<group>"; };
+		A20708F129A1719700FFBCD0 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		A20708F329A171C100FFBCD0 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +127,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A20708C129A1590700FFBCD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20708C929A1590700FFBCD0 /* SwiftUI.framework in Frameworks */,
+				A20708C729A1590700FFBCD0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20708DF29A1613100FFBCD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20708E429A1613100FFBCD0 /* DeviceActivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +153,9 @@
 				A207089529A158C400FFBCD0 /* ellehacks */,
 				A20708A629A158C500FFBCD0 /* ellehacksTests */,
 				A20708B029A158C600FFBCD0 /* ellehacksUITests */,
+				A20708CA29A1590700FFBCD0 /* ellehackswidget */,
+				A20708E529A1613100FFBCD0 /* ellehacksdeviceactivityext */,
+				A20708C529A1590700FFBCD0 /* Frameworks */,
 				A207089429A158C400FFBCD0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +166,8 @@
 				A207089329A158C400FFBCD0 /* ellehacks.app */,
 				A20708A329A158C500FFBCD0 /* ellehacksTests.xctest */,
 				A20708AD29A158C600FFBCD0 /* ellehacksUITests.xctest */,
+				A20708C429A1590700FFBCD0 /* ellehackswidgetExtension.appex */,
+				A20708E229A1613100FFBCD0 /* ellehacksdeviceactivityext.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +175,7 @@
 		A207089529A158C400FFBCD0 /* ellehacks */ = {
 			isa = PBXGroup;
 			children = (
+				A20708F029A1717700FFBCD0 /* Models */,
 				A207089629A158C400FFBCD0 /* ellehacksApp.swift */,
 				A207089829A158C400FFBCD0 /* ContentView.swift */,
 				A207089A29A158C500FFBCD0 /* Assets.xcassets */,
@@ -127,6 +209,48 @@
 			path = ellehacksUITests;
 			sourceTree = "<group>";
 		};
+		A20708C529A1590700FFBCD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A20708C629A1590700FFBCD0 /* WidgetKit.framework */,
+				A20708C829A1590700FFBCD0 /* SwiftUI.framework */,
+				A20708E329A1613100FFBCD0 /* DeviceActivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A20708CA29A1590700FFBCD0 /* ellehackswidget */ = {
+			isa = PBXGroup;
+			children = (
+				A20708CB29A1590700FFBCD0 /* ellehackswidgetBundle.swift */,
+				A20708CD29A1590700FFBCD0 /* ellehackswidgetLiveActivity.swift */,
+				A20708CF29A1590700FFBCD0 /* ellehackswidget.swift */,
+				A20708D129A1590700FFBCD0 /* ellehackswidget.intentdefinition */,
+				A20708D229A1590900FFBCD0 /* Assets.xcassets */,
+				A20708D429A1590900FFBCD0 /* Info.plist */,
+			);
+			path = ellehackswidget;
+			sourceTree = "<group>";
+		};
+		A20708E529A1613100FFBCD0 /* ellehacksdeviceactivityext */ = {
+			isa = PBXGroup;
+			children = (
+				A20708E629A1613100FFBCD0 /* DeviceActivityMonitorExtension.swift */,
+				A20708E829A1613100FFBCD0 /* Info.plist */,
+				A20708E929A1613100FFBCD0 /* ellehacksdeviceactivityext.entitlements */,
+			);
+			path = ellehacksdeviceactivityext;
+			sourceTree = "<group>";
+		};
+		A20708F029A1717700FFBCD0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20708F129A1719700FFBCD0 /* DataModel.swift */,
+				A20708F329A171C100FFBCD0 /* ScheduleModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +261,13 @@
 				A207088F29A158C400FFBCD0 /* Sources */,
 				A207089029A158C400FFBCD0 /* Frameworks */,
 				A207089129A158C400FFBCD0 /* Resources */,
+				A20708DD29A1590900FFBCD0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A20708D829A1590900FFBCD0 /* PBXTargetDependency */,
+				A20708EB29A1613100FFBCD0 /* PBXTargetDependency */,
 			);
 			name = ellehacks;
 			productName = ellehacks;
@@ -183,6 +310,40 @@
 			productReference = A20708AD29A158C600FFBCD0 /* ellehacksUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A20708C329A1590700FFBCD0 /* ellehackswidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A20708DA29A1590900FFBCD0 /* Build configuration list for PBXNativeTarget "ellehackswidgetExtension" */;
+			buildPhases = (
+				A20708C029A1590700FFBCD0 /* Sources */,
+				A20708C129A1590700FFBCD0 /* Frameworks */,
+				A20708C229A1590700FFBCD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ellehackswidgetExtension;
+			productName = ellehackswidgetExtension;
+			productReference = A20708C429A1590700FFBCD0 /* ellehackswidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A20708E129A1613100FFBCD0 /* ellehacksdeviceactivityext */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A20708ED29A1613100FFBCD0 /* Build configuration list for PBXNativeTarget "ellehacksdeviceactivityext" */;
+			buildPhases = (
+				A20708DE29A1613100FFBCD0 /* Sources */,
+				A20708DF29A1613100FFBCD0 /* Frameworks */,
+				A20708E029A1613100FFBCD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ellehacksdeviceactivityext;
+			productName = ellehacksdeviceactivityext;
+			productReference = A20708E229A1613100FFBCD0 /* ellehacksdeviceactivityext.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +365,12 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = A207089229A158C400FFBCD0;
 					};
+					A20708C329A1590700FFBCD0 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					A20708E129A1613100FFBCD0 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = A207088E29A158C400FFBCD0 /* Build configuration list for PBXProject "ellehacks" */;
@@ -222,6 +389,8 @@
 				A207089229A158C400FFBCD0 /* ellehacks */,
 				A20708A229A158C500FFBCD0 /* ellehacksTests */,
 				A20708AC29A158C600FFBCD0 /* ellehacksUITests */,
+				A20708C329A1590700FFBCD0 /* ellehackswidgetExtension */,
+				A20708E129A1613100FFBCD0 /* ellehacksdeviceactivityext */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +419,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A20708C229A1590700FFBCD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20708D329A1590900FFBCD0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20708E029A1613100FFBCD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,6 +442,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A207089929A158C400FFBCD0 /* ContentView.swift in Sources */,
+				A20708F229A1719700FFBCD0 /* DataModel.swift in Sources */,
+				A20708F429A171C100FFBCD0 /* ScheduleModel.swift in Sources */,
+				A20708D629A1590900FFBCD0 /* ellehackswidget.intentdefinition in Sources */,
 				A207089729A158C400FFBCD0 /* ellehacksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +466,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A20708C029A1590700FFBCD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20708D029A1590700FFBCD0 /* ellehackswidget.swift in Sources */,
+				A20708CC29A1590700FFBCD0 /* ellehackswidgetBundle.swift in Sources */,
+				A20708D529A1590900FFBCD0 /* ellehackswidget.intentdefinition in Sources */,
+				A20708CE29A1590700FFBCD0 /* ellehackswidgetLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20708DE29A1613100FFBCD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20708E729A1613100FFBCD0 /* DeviceActivityMonitorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +497,16 @@
 			isa = PBXTargetDependency;
 			target = A207089229A158C400FFBCD0 /* ellehacks */;
 			targetProxy = A20708AE29A158C600FFBCD0 /* PBXContainerItemProxy */;
+		};
+		A20708D829A1590900FFBCD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A20708C329A1590700FFBCD0 /* ellehackswidgetExtension */;
+			targetProxy = A20708D729A1590900FFBCD0 /* PBXContainerItemProxy */;
+		};
+		A20708EB29A1613100FFBCD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A20708E129A1613100FFBCD0 /* ellehacksdeviceactivityext */;
+			targetProxy = A20708EA29A1613100FFBCD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -412,6 +628,7 @@
 		A20708B829A158C600FFBCD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,6 +658,7 @@
 		A20708B929A158C600FFBCD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +761,112 @@
 			};
 			name = Release;
 		};
+		A20708DB29A1590900FFBCD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37P499YL64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ellehackswidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ellehackswidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ellehacks.ellehacks.ellehackswidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A20708DC29A1590900FFBCD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37P499YL64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ellehackswidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ellehackswidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ellehacks.ellehacks.ellehackswidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A20708EE29A1613100FFBCD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ellehacksdeviceactivityext/ellehacksdeviceactivityext.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37P499YL64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ellehacksdeviceactivityext/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ellehacksdeviceactivityext;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ellehacks.ellehacks.ellehacksdeviceactivityext;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A20708EF29A1613100FFBCD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ellehacksdeviceactivityext/ellehacksdeviceactivityext.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37P499YL64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ellehacksdeviceactivityext/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ellehacksdeviceactivityext;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ellehacks.ellehacks.ellehacksdeviceactivityext;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,6 +902,24 @@
 			buildConfigurations = (
 				A20708BE29A158C600FFBCD0 /* Debug */,
 				A20708BF29A158C600FFBCD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A20708DA29A1590900FFBCD0 /* Build configuration list for PBXNativeTarget "ellehackswidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A20708DB29A1590900FFBCD0 /* Debug */,
+				A20708DC29A1590900FFBCD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A20708ED29A1613100FFBCD0 /* Build configuration list for PBXNativeTarget "ellehacksdeviceactivityext" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A20708EE29A1613100FFBCD0 /* Debug */,
+				A20708EF29A1613100FFBCD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

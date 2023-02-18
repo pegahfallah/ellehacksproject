@@ -1,26 +1,39 @@
 //
 //  ContentView.swift
-//  ellehacks
+//  DeviceActivityExample
 //
-//  Created by Pegah Fallah on 2023-02-18.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isDiscouragedPresented = false
+    @State private var isEncouragedPresented = false
+    
+    @EnvironmentObject var model: DataModel
+    
     var body: some View {
+
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button("Select Apps to Discourage") {
+                isDiscouragedPresented = true
+            }
+            .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
+            
+            Button("Select Apps to Encourage") {
+                isEncouragedPresented = true
+            }
+            .familyActivityPicker(isPresented: $isEncouragedPresented, selection: $model.selectionToEncourage)
         }
-        .padding()
+        .onChange(of: model.selectionToDiscourage) { newSelection in
+            DataModel.shared.setShieldRestrictions()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(DataModel())
     }
 }
