@@ -5,7 +5,37 @@
 //  Created by Pegah Fallah on 2023-02-18.
 //
 
+import SwiftUI
 import DeviceActivity
+
+//@main
+//struct ellehacksdeviceactivityext: DeviceActivityReportExtension {
+//    var body: some DeviceActivityReportScene {
+//        BarChartReport { configuration in BarChartView(configuration: configuration)}
+//    }
+//}
+//
+//struct BarChartView: View {
+//    struct Configuration {
+//        let totalUsageByCategory: [ActivityCategory:TimeInterval]
+//    }
+//    let configuration: Configuration
+//    var body: some View {
+//        BarChart(usage: configuration.totalUsageByCategory)
+//    }
+//}
+//
+//struct BarChart: DeviceActivityReportScene {
+//    let context: DeviceActivityReport.Context = .barChart
+//    let content: (BarChartView.Configuration) -> PieChartView
+//    func makeConfiguration(representing data: [DeviceActivityResults]) -> BarChartView.Configuration {
+//        var totalUsageByCategory: [ActivityCategory:TimeInterval]
+//        totalUsageByCategory = data.map()
+//
+//        return BarChartView.Configuration(totalUsageByCategory: totalUsage)
+//    }
+//}
+
 
 // Optionally override any of the functions below.
 // Make sure that your class name matches the NSExtensionPrincipalClass in your Info.plist.
