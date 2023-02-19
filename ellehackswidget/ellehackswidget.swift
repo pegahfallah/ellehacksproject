@@ -45,6 +45,13 @@ struct ellehackswidgetEntryView : View {
 
     var body: some View {
         Text(entry.date, style: .time)
+        
+        
+        ZStack {
+            Color(.systemBlue).opacity(0.2)
+            Text(entry.date, style: .time)
+        }
+        
     }
 }
 
