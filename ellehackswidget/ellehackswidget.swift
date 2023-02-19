@@ -42,15 +42,12 @@ struct SimpleEntry: TimelineEntry {
 
 struct ellehackswidgetEntryView : View {
     var entry: Provider.Entry
-
+    var angry = "\u{1F62D}"
     var body: some View {
-        ZStack {
-            Color(.systemBlue).opacity(0.2)
-            Image(systemName: "star.fill")
-                .font(.system(size: 40)) 
-            Text("Screentime report")
-                .font(.headline)
-        }
+        VStack {
+            Text(angry).font(.system(size: 80))
+            Text("10g of C02")
+        }.frame(maxWidth: .infinity, maxHeight: .infinity).edgesIgnoringSafeArea(.all).background(Color(#colorLiteral(red: 0.6901960784, green: 0.9098039216, blue: 0.9725490196, alpha: 1)))
     }
 }
 
@@ -62,7 +59,7 @@ struct ellehackswidget: Widget {
             ellehackswidgetEntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .description("This is an example widget.");
     }
 }
 
