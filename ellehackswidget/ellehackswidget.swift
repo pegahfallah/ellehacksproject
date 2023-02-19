@@ -44,14 +44,13 @@ struct ellehackswidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
-        
-        
         ZStack {
             Color(.systemBlue).opacity(0.2)
-            Text(entry.date, style: .time)
+            Image(systemName: "star.fill")
+                .font(.system(size: 40)) 
+            Text("Screentime report")
+                .font(.headline)
         }
-        
     }
 }
 

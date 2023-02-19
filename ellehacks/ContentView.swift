@@ -1,111 +1,94 @@
-////
-////  ContentView.swift
-////  DeviceActivityExample
-////
-////
-//
+
 import SwiftUI
 
 struct ContentView: View {
 
-    @State private var page = 1
-
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                if page == 1 {
+            VStack {
+                TabView {
                     Page1View()
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                } else if page == 2 {
+                        .tabItem {
+                            Text("Page 1")
+                        }
                     Page2View()
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                } else if page == 3 {
+                        .tabItem {
+                            Text("Page 2")
+                        }
                     Page3View()
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                } else if page == 4 {
+                        .tabItem {
+                            Text("Page 3")
+                        }
                     Page4View()
-                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .tabItem {
+                            Text("Page 4")
+                        }
                 }
             }
-            .gesture(
-                DragGesture(minimumDistance: 20, coordinateSpace: .global)
-                    .onEnded { value in
-                        let horizontalAmount = value.translation.width
-                        let verticalAmount = value.translation.height
-                        if abs(horizontalAmount) > abs(verticalAmount) {
-                            // Swipe detected as horizontal
-                            if horizontalAmount > 0 && page > 1 {
-                                // Swipe to the right
-                                page -= 1
-                            } else if horizontalAmount < 0 && page < 4 {
-                                // Swipe to the left
-                                page += 1
-                            }
-                        }
-                    }
-            )
         }
+      }
+
+struct Page1View: View {
+    var body: some View {
+        ZStack {
+            Image("RAINCLOUD")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 200, height: 200)
+            Text("ScreenSaver").font(.largeTitle).bold()
+        }.frame(maxWidth: .infinity, maxHeight: .infinity).edgesIgnoringSafeArea(.all).background(Color(#colorLiteral(red: 0.6901960784, green: 0.9098039216, blue: 0.9725490196, alpha: 1)))
     }
 }
 
+struct Page2View: View {
+            @State private var name: String = ""
+            @State private var numPhotos: String = ""
+            @State private var scrollAvg: String = ""
+            @State private var screenTimeGoal: String = ""
+            
+            var body: some View {
+                
+                Form {
+                    Section(header: Text("User Info")) {
+                        TextField("Name", text: $name)
+                    }
+                    
+                    Section(header: Text("Usage Stats")) {
+                        TextField("Average scrolling", text: $scrollAvg);
+                        TextField("Screen time goal", text: $screenTimeGoal)
+                    }
+                    
+                    
+                }
+                .padding(.vertical, 20)
+            }
+        }
+
+struct Page3View: View {
+    var body: some View {
+        Text("This is Page 3").frame(maxWidth: .infinity, maxHeight: .infinity).edgesIgnoringSafeArea(.all).background(Color(#colorLiteral(red: 0.6901960784, green: 0.9098039216, blue: 0.9725490196, alpha: 1)))
+    }
+}
+
+struct Page4View: View {
+    var body: some View {
+        Text("This is Page 4").frame(maxWidth: .infinity, maxHeight: .infinity).edgesIgnoringSafeArea(.all).background(Color(#colorLiteral(red: 0.6901960784, green: 0.9098039216, blue: 0.9725490196, alpha: 1)))
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
 
-//struct ContentView: View {
-//
-//    var body: some View {
-//        TabView {
-//            Page1View()
-//                .tabItem {
-//                    Text("Page 1")
-//                }
-//            Page2View()
-//                .tabItem {
-//                    Text("Page 2")
-//                }
-//            Page3View()
-//                .tabItem {
-//                    Text("Page 3")
-//                }
-//            Page4View()
-//                .tabItem {
-//                    Text("Page 4")
-//                }
-//        }
-//        .animation(.easeInOut(duration: 0.3))
-//    }
-//}
-//
-struct Page1View: View {
-    var body: some View {
-        Text("This is Page 1")
+extension Color {
+    init(hex: String) {
+        let scanner = Scanner(string: hex)
+        var rgbValue: UInt64 = 0
+        scanner.scanHexInt64(&rgbValue)
+
+        self.init(red: Double((rgbValue & 0xFF0000) >> 16) / 255.0,
+                  green: Double((rgbValue & 0x00FF00) >> 8) / 255.0,
+                  blue: Double(rgbValue & 0x0000FF) / 255.0)
     }
 }
 
-struct Page2View: View {
-    var body: some View {
-        Text("This is Page 2")
-    }
-}
-
-struct Page3View: View {
-    var body: some View {
-        Text("This is Page 3")
-    }
-}
-
-struct Page4View: View {
-    var body: some View {
-        Text("This is Page 4")
-    }
-}
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//            .environmentObject(DataModel())
-//    }
-//}
